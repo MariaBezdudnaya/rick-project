@@ -1,0 +1,23 @@
+.ShowCard_conatainer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+   
+.ShowCard {
+    padding: 40px 40px;
+    background-color: #3c3859;
+    color: #a0c0c9;
+    border: 1px solid rgb(72, 109, 141);
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: 700;
+
+   
+}
+
+.ShowCard :hover {
+    background-color: #fff;
+    color: black;
+}
