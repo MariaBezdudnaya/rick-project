@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchLocations, fetchCharacters } from "./api";
+import { fetchLocations, fetchCharacters } from "../api";
 import "./Locations.css";
 
 export const Locations = () => {

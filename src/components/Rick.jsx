@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchEpisodes, fetchCharacters } from "./api";
+import { fetchEpisodes, fetchCharacters } from "../api";
 import "./Rick.css";
 
 export const Rick = () => {

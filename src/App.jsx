@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Rick } from "./components/Rick";
 import { Locations } from "./components/Locations";
 import "./App.css";
+import { EpisodesContainer } from "./components/containers/EpisodesContainer";
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
   return (
     <div className="ShowCard_conatainer">
       <div className="ShowCard" onClick={toggleRick}>Episodes</div>
-      {showRick && <Rick />}
+      {showRick && <EpisodesContainer />}
       <div className="ShowCard" onClick={toggleLocations}>Locations</div>
       {showLocations && <Locations />}
     </div>
