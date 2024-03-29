@@ -24,7 +24,10 @@ export const Locations = () => {
         setIsLoadingByLocations({ ...isLoadingByLocations, [location.id]: true });
 
         fetchCharacters(ids).then((data) => {
-          console.log(data);
+          if (!Array.isArray(data)) {
+              data = [data]; // Преобразование в массив, если данные не являются массивом
+          }
+          console.log(data, Array.isArray(data));
           setResidentsByLocations({ ...residentsByLocations, [location.id]: data });
           setIsLoadingByLocations({ ...isLoadingByLocations, [location.id]: false });
         });

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchCharacters } from "../../api";
 import { CharacterList } from "../presentational/CharacterList";
+import "../Rick.css";
 
 export const CharactersContainer = ({ ids }) => {
   const [characters, setCharacters] = useState([]);

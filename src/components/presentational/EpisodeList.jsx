@@ -1,4 +1,3 @@
-import { EpisodeItem } from "./EpisodeItem";
 import { Collapse } from "./Collapse";
 import { CharactersContainer } from "../containers/CharactersContainer";
 
