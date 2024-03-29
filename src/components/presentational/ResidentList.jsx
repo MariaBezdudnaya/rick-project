@@ -1,6 +1,8 @@
 import { ResidentItem } from "./ResidentItem";
+import { useResidents } from "../hooks/useResidents";
 
-export const ResidentList = ({ residents, isLoading }) => {
+export const ResidentList = ({ ids }) => {
+  const { residents, isLoading } = useResidents(ids);
   if (isLoading) {
     return <div className="loading">Загрузка...</div>;
   }

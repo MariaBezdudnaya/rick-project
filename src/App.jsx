@@ -1,9 +1,11 @@
 import { useState } from "react";
 // import { Rick } from "./components/Rick";
+// import { EpisodesContainer } from "./components/containers/EpisodesContainer";
+import { EpisodeList } from "./components/presentational/EpisodeList";
 // import { Locations } from "./components/Locations";
+// import { LocationsContainer } from "./components/containers/LocationsContainer";
+import { LocationList } from "./components/presentational/LocationList";
 import "./App.css";
-import { EpisodesContainer } from "./components/containers/EpisodesContainer";
-import { LocationsContainer } from "./components/containers/LocationsContainer";
 
 function App() {
 
@@ -23,9 +25,9 @@ function App() {
   return (
     <div className="ShowCard_conatainer">
       <div className="ShowCard" onClick={toggleRick}>Episodes</div>
-      {showRick && <EpisodesContainer />}
+      {showRick && <EpisodeList />}
       <div className="ShowCard" onClick={toggleLocations}>Locations</div>
-      {showLocations && <LocationsContainer />}
+      {showLocations && <LocationList />}
     </div>
   );
 }

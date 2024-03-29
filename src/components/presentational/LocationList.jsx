@@ -1,7 +1,9 @@
 import { Collapse } from "./Collapse";
-import { ResidentsContainer } from "../containers/ResidentsContainer";
+import { ResidentList } from "./ResidentList";
+import { useLocations } from "../hooks/useLocations";
 
-export const LocationList = ({ locations }) => {
+export const LocationList = () => {
+  const { locations } = useLocations();
   return (
     <div>
       {locations.map((location) => (
@@ -11,7 +13,7 @@ export const LocationList = ({ locations }) => {
           className="location"
           title={location.type + ":" + location.name}
           content={
-            <ResidentsContainer 
+            <ResidentList 
               ids={location.residents.map((resident) => {
                 const id = resident.split("/").pop();
                 return id;

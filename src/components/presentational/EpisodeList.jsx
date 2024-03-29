@@ -1,7 +1,10 @@
 import { Collapse } from "./Collapse";
-import { CharactersContainer } from "../containers/CharactersContainer";
+import { CharacterList } from "./CharacterList";
+import { useEpisodes } from "../hooks/useEpisodes";
+import "../Rick.css";
 
-export const EpisodeList = ({ episodes }) => {
+export const EpisodeList = () => {
+  const { episodes } = useEpisodes();
   return (
     <div>
       {episodes.map((episode) => (
@@ -11,7 +14,7 @@ export const EpisodeList = ({ episodes }) => {
           className="episode"
           title={episode.episode + ":" + episode.name}
           content={
-            <CharactersContainer 
+            <CharacterList 
               ids={episode.characters.map((character) => {
                 const id = character.split("/").pop();
                 return id;

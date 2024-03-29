@@ -1,6 +1,8 @@
 import { CharacterItem } from "./CharacterItem";
+import { useCharacters } from "../hooks/useCharacters";
 
-export const CharacterList = ({ characters, isLoading}) => {
+export const CharacterList = ({ ids}) => {
+    const { characters, isLoading } = useCharacters(ids);
     if (isLoading) {
         return <div className="loading">Загрузка...</div>
     }
